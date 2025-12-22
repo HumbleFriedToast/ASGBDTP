@@ -1,4 +1,5 @@
----PARTIE 1: LANGAGE DE DEFINITION DE DONNEES (DDL)
+--SECTION 1: languages de  definition de donnees (DDL)
+--PARTIE 1: Creation des tables
 --les Tables Proposees:
 CREATE TABLE `Jouer`(
     `ID_Jouer` BIGINT NOT NULL,
@@ -70,5 +71,28 @@ ALTER TABLE `Jouer`
     MODIFY COLUMN `Email` VARCHAR(80) NOT NULL;
 ALTER TABLE `Jeu`
     MODIFY COLUMN `Genre` VARCHAR(50) NOT NULL;
---PARTIE 5: suppression d'un attribut
-    
+
+--PARTIE 5:supression d'un collonne
+ALTER TABLE `Jouer`
+    DROP COLUMN `Age`;
+ALTER TABLE `Jeu`
+    DROP COLUMN `DateSortie`;
+--PARTIE 6: renommer une table
+RENAME TABLE `Trophée` TO `Trophee`;
+RENAME TABLE `StudioDev` TO `Studio_Dev`;
+--PARTIE 7: Ajouter la contrainte spécifiant qu’un attribut non déclaré clé étrangère fait référence à la cléd’uneautretable
+ALTER TABLE `SessionJeu`
+    ADD CONSTRAINT `sessionjeu_id_jouer_foreign` FOREIGN KEY(`ID_Jouer`) REFERENCES `Jouer`(`ID_Jouer`);
+ALTER TABLE `Achat`
+    ADD CONSTRAINT `achat_id_jeu_foreign` FOREIGN KEY(`ID_Jeu`) REFERENCES `Jeu`(`ID_Jeu`);
+--PARTIE 8: contrainte des attributes intra-table 
+--Nom de joueur et Email ne doivent pas être identiques
+Alter Table `Jouer`
+    ADD CONSTRAINT `nom_email_check` CHECK (Pseudo <> Email);
+
+--PArtie 9: contrainte inter-table
+--La date d’achat d’un jeu doit être postérieure à la date de création du studio de développement du jeu
+Alter Table `Achat`
+    ADD CONSTRAINT `achat_date_check` CHECK (DateAchat > (SELECT DateCreation FROM Studio_Dev JOIN Jeu ON Studio_Dev.ID_StudioDev = Jeu.ID_StudioDev WHERE Jeu.ID_Jeu = Achat.ID_Jeu));
+--SECTION 2: LANGAGE DE MANIPULATION DE DONNEES (DML)
+--PARTIE 1: insertion de donnes
