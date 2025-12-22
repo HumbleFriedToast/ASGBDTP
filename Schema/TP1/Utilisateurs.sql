@@ -1,12 +1,9 @@
---PARTIE 1: CREATION D'UN UTILISATEUR ET ATTRIBUTION DE PRIVILEGES
-
+--SECTION 0: CREATION D'UN UTILISATEUR ET ATTRIBUTION DE PRIVILEGES
 --Creation of User
 CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'secure_password';
 --Granting Privileges
 GRANT SELECT, INSERT, UPDATE ON my_database.* TO 'new_user'@'localhost';
-
 --Creation of TableSpace "Faycal_TBS" and  temporary tablespace "Faycal_temp_TBS"
-
 CREATE TABLESPACE Faycal_TBS
     ADD DATAFILE 'C:/path_to_your_directory/Faycal_TBS_file.db
     ' SIZE 50M
@@ -26,6 +23,3 @@ GRANT CONNECT, RESOURCE TO DALIL_FAYCAL;
 --Granting DALIL FAYCAL Priviliges
 GRANT SELECT, INSERT, UPDATE ON my_database.* TO DALIL_FAYCAL;
 
---PARTIE 2: LANGAGE DE DEFINITION DE DONNEES (DDL)
---les Tables Proposees:
---Table 
