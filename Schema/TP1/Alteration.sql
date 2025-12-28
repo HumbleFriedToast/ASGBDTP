@@ -54,6 +54,4 @@ EXCEPTION
     WHEN NO_DATA_FOUND THEN
         RAISE_APPLICATION_ERROR(-20002, 'Jeu ou studio introuvable pour vérifier la date d''achat.');
 END;
-/
---SECTION 2: LANGAGE DE MANIPULATION DE DONNEES (DML)
---PARTIE 1: insertion de donnes
+
