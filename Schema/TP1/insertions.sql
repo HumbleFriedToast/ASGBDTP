@@ -1,12 +1,12 @@
 --insertions normale:
 --table: Jouer
-INSERT INTO Jouer Values(1, 'PlayerOne', 'Player@gmail.com', 25);
-INSERT INTO Jouer Values(2, 'GamerGirl', 'Girl@gmail.com', 22);
-INSERT INTO Jouer Values(3, 'NoobMaster', 'Master@gmail.com', 30);
-INSERT INTO Jouer Values(4, 'ProGamer', 'Pro@gmail.com', 28);
-INSERT INTO Jouer Values(5, 'lafriqin', 'dreach@gmail.com', 27);
-INSERT INTO Jouer Values(6, 'Eren','Freedom@gmail.com',24);
-INSERT INTO Jouer Values(7, 'Hassan','Skyrim@gmail.com',29);
+INSERT INTO Jouer Values(1, 'PlayerOne', 'Player@gmail.com', 25,'Algeria');
+INSERT INTO Jouer Values(2, 'GamerGirl', 'Girl@gmail.com', 22,'USA');
+INSERT INTO Jouer Values(3, 'NoobMaster', 'Master@gmail.com', 30,'UK');
+INSERT INTO Jouer Values(4, 'ProGamer', 'Pro@gmail.com', 28,'Canada');
+INSERT INTO Jouer Values(5, 'lafriqin', 'dreach@gmail.com', 27,'Tunisia');
+INSERT INTO Jouer Values(6, 'Eren','Freedom@gmail.com',24,'Germany');
+INSERT INTO Jouer Values(7, 'Hassan','Skyrim@gmail.com',29,'Morocco');
 --table: Jeu
 INSERT INTO Jeu Values(1,'Valorant', 'shooter', '12+', 'PC', 1);
 INSERT INTO Jeu Values(2,'EldenRing','RolePlaying','18+','PC',2);
