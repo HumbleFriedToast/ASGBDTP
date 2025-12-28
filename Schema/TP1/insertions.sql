@@ -57,8 +57,33 @@ INSERT INTO StudioDev Values(7, 'Bethesda', TO_DATE('1986-10-01', 'YYYY-MM-DD'))
 
 
 --insertions avec erreurs:
---table: Jouer (doublon ID_Jouer)
---table: Achat (clé étrangère invalide ID_Jeu)
---table: SessionJeu (contrainte nom_email_check violée)
+
+--table: Jouer (doublon ID_Jouer)---------------------------------
+INSERT INTO Jouer Values(1, 'Fake!', 'fakeemail@gmail.com', 20);
+--Explication:
+--violation de contrainte d'integrite (le cle Primaire est UNIQUE)
+------------------------------------------------------------------
+
+--table: Achat (clé étrangère invalide ID_Jeu)--------------------
+INSERT INTO Achat Values(2, 999, TO_DATE('2022-09-01', 'YYYY-MM-DD'));
+--Explication:
+--violation: contrainte d'integrite de reference (Foreign Key) (ID_Jeu 999 n'existe pas dans la table Jeu)
+------------------------------------------------------------------
+
+--table: SessionJeu (valeur NULL non autorisée pour DureeSession)------
+INSERT INTO SessionJeu Values(8, NULL, INTERVAL '2' HOUR, 1);
+--Explication:
+--violation: contrainte NOT NULL sur l'attribut DateSession
+------------------------------------------------------------------
+
 --table: Achat (trigger achat_date_check_trg violé)
---table: Jeu (clé étrangère invalide ID_StudioDev)
+INSERT INTO Achat Values(3, 2, TO_DATE('1980-01-01', 'YYYY-MM-DD'));
+--Explication:
+--violation: la date d'achat (1980-01-01) est  inferieur à la date de creation du studio (1986-11-01) du jeu eldenring
+------------------------------------------------------------------
+
+--table: Jeu (clé étrangère invalide ID_StudioDev)----------------
+INSERT INTO Jeu Values(8,'FakeGame', 'Action', '16+', 'PC', 999);
+--Explication:
+--violation: contrainte d'integrite de reference (Foreign Key) (ID_StudioDev 999 n'existe pas dans la table StudioDev)
+------------------------------------------------------------------
