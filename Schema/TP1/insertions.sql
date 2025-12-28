@@ -27,31 +27,31 @@ INSERT INTO Achat Values(7, 7, TO_DATE('2022-07-20', 'YYYY-MM-DD'));
 
 
 --table: SessionJeu
-INSERT INTO SessionJeu Values()
-INSERT INTO SessionJeu Values()
-INSERT INTO SessionJeu Values()
-INSERT INTO SessionJeu Values()
-INSERT INTO SessionJeu Values()
-INSERT INTO SessionJeu Values()
-INSERT INTO SessionJeu Values()
+INSERT INTO SessionJeu Values(1, TO_DATE('2022-08-01', 'YYYY-MM-DD'), INTERVAL '2' HOUR, 1);
+INSERT INTO SessionJeu Values(2, TO_DATE('2022-08-02', 'YYYY-MM-DD'), INTERVAL '1' HOUR + '30' MINUTE, 2);
+INSERT INTO SessionJeu Values(3, TO_DATE('2022-08-03', 'YYYY-MM-DD'), INTERVAL '3' HOUR + '15' MINUTE, 3);
+INSERT INTO SessionJeu Values(4, TO_DATE('2022-08-04', 'YYYY-MM-DD'), INTERVAL '4' HOUR, 4);
+INSERT INTO SessionJeu Values(5, TO_DATE('2022-08-05', 'YYYY-MM-DD'), INTERVAL '2' HOUR + '45' MINUTE, 5);
+INSERT INTO SessionJeu Values(6, TO_DATE('2022-08-06', 'YYYY-MM-DD'), INTERVAL '5' HOUR, 6);
+INSERT INTO SessionJeu Values(7, TO_DATE('2022-08-07', 'YYYY-MM-DD'), INTERVAL '1' HOUR + '15' MINUTE, 7);
 
 --table: TROPHEE
-INSERT INTO TROPHEE Values()
-INSERT INTO TROPHEE Values()
-INSERT INTO TROPHEE Values()
-INSERT INTO TROPHEE Values()
-INSERT INTO TROPHEE Values()
-INSERT INTO TROPHEE Values()
-INSERT INTO TROPHEE Values()
+INSERT INTO TROPHEE Values(1, 'FirstBlood', 10, 1);
+INSERT INTO TROPHEE Values(2,'SharpShooter', 20, 1);
+INSERT INTO TROPHEE Values(3,'DragonSlayer', 30, 2);
+INSERT INTO TROPHEE Values(4,'Champion', 25, 3);
+INSERT INTO TROPHEE Values(5,'Builder', 15, 4);
+INSERT INTO TROPHEE Values(6,'MonsterHunter', 35, 5);
+INSERT INTO TROPHEE Values(7,'StealthMaster', 20, 6);
 
 --table: StudioDev
-INSERT INTO StudioDev Values()
-INSERT INTO StudioDev Values()
-INSERT INTO StudioDev Values()
-INSERT INTO StudioDev Values()
-INSERT INTO StudioDev Values()
-INSERT INTO StudioDev Values()
-INSERT INTO StudioDev Values()
+INSERT INTO StudioDev Values(1, 'RiotGames', TO_DATE('2006-09-01', 'YYYY-MM-DD'));
+INSERT INTO StudioDev Values(2, 'FromSoftware', TO_DATE('1986-11-01', 'YYYY-MM-DD'));
+INSERT INTO StudioDev Values(3, 'EA Sports', TO_DATE('1982-05-01', 'YYYY-MM-DD'));
+INSERT INTO StudioDev Values(4, 'Mojang Studios', TO_DATE('2009-11-01', 'YYYY-MM-DD'));
+INSERT INTO StudioDev Values(5, 'CD Projekt Red', TO_DATE('2002-07-01', 'YYYY-MM-DD'));
+INSERT INTO StudioDev Values(6, 'Innersloth', TO_DATE('2015-06-01', 'YYYY-MM-DD'));
+INSERT INTO StudioDev Values(7, 'Bethesda', TO_DATE('1986-10-01', 'YYYY-MM-DD'));
 
 
 
