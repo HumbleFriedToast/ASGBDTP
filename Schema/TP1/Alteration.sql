@@ -1,6 +1,8 @@
 --PARTIE 2: Ajouter Attributs
 ALTER TABLE Jouer
     ADD (Pays VARCHAR2(100) NOT NULL);
+ALTER TABLE Achat
+    ADD (Prix INT NOT NULL);
 ALTER TABLE Jeu
     ADD (DateSortie DATE NOT NULL);
 --PARTIE 3: Ajouter Contraint Not null

@@ -87,3 +87,8 @@ INSERT INTO Jeu Values(8,'FakeGame', 'Action', '16+', 'PC', 999);
 --Explication:
 --violation: contrainte d'integrite de reference (Foreign Key) (ID_StudioDev 999 n'existe pas dans la table StudioDev)
 ------------------------------------------------------------------
+
+
+
+
+--Insertion (special)
