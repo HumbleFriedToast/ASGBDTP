@@ -5,6 +5,8 @@ ALTER TABLE Achat
     ADD (Prix INT NOT NULL);
 ALTER TABLE Jeu
     ADD (DateSortie DATE NOT NULL);
+
+    
 --PARTIE 3: Ajouter Contraint Not null
 ALTER TABLE Achat
     MODIFY (DateAchat DATE NOT NULL);
