@@ -1,5 +1,5 @@
---insertions normale:
---table: Jouer
+-- Q1) Insertions normales:
+-- Q1) table: Jouer
 INSERT INTO Jouer Values(1, 'PlayerOne', 'Player@gmail.com', 25);
 INSERT INTO Jouer Values(2, 'GamerGirl', 'Girl@gmail.com', 22);
 INSERT INTO Jouer Values(3, 'NoobMaster', 'Master@gmail.com', 30);
@@ -59,9 +59,9 @@ INSERT INTO StudioDev Values(7, 'Bethesda', TO_DATE('1986-10-01', 'YYYY-MM-DD'))
 
 
 
---insertions avec erreurs:
+-- Q1) Insertions avec erreurs:
 
---table: Jouer (doublon ID_Jouer)---------------------------------
+-- Q1.a) table: Jouer (doublon ID_Jouer)---------------------------------
 INSERT INTO Jouer Values(1, 'Fake!', 'fakeemail@gmail.com', 20);
 --Explication:
 --violation de contrainte d'integrite (le cle Primaire est UNIQUE)
@@ -94,4 +94,4 @@ INSERT INTO Jeu Values(8,'FakeGame', 'Action', '16+', 'PC', 999);
 
 
 
---Insertion (special)
+-- Q1) Insertion (special)

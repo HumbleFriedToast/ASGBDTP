@@ -1,5 +1,5 @@
---SECTION 0: CREATION D'UN UTILISATEUR ET ATTRIBUTION DE PRIVILEGES
---Creation of User
+-- Q0) SECTION 0: CREATION D'UN UTILISATEUR ET ATTRIBUTION DE PRIVILEGES
+-- Q0) Creation of User (Oracle examples)
 --SECTION 0: CREATION D'UN UTILISATEUR ET ATTRIBUTION DE PRIVILEGES (Oracle)
 -- Création d'un utilisateur minimal (adapter le mot de passe)
 CREATE USER NEW_USER IDENTIFIED BY secure_password;
