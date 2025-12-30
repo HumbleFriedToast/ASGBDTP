@@ -1,16 +1,4 @@
- 
--- Q1) SECTION 1 : Langages de définition de données (DDL)
--- Q1) PARTIE 1 : Création des tables
--- Jouer : table des joueurs
-CREATE TABLE Jouer (
-    ID_Jouer NUMBER NOT NULL,
-    Pseudo VARCHAR2(32) NOT NULL,
-    Email VARCHAR2(100) NOT NULL,
-    Age NUMBER(3) NOT NULL,
-    Pays VARCHAR2(100) NOT NULL,
-    CONSTRAINT pk_jouer PRIMARY KEY (ID_Jouer)
 
-);
 
 -- Jeu : table des jeux avec clé primaire identity
 CREATE TABLE Jeu (
@@ -20,14 +8,22 @@ CREATE TABLE Jeu (
     ClassificationAge VARCHAR2(10) NOT NULL,
     Plateform VARCHAR2(20) NOT NULL,
     ID_StudioDev NUMBER NOT NULL,
+    Prix INT NOT NULL,
     CONSTRAINT pk_jeu PRIMARY KEY (ID_Jeu)
 );
-
+CREATE TABLE Jouer (
+    ID_Jouer NUMBER NOT NULL,
+    USERNAME VARCHAR2(32) NOT NULL,
+    Email VARCHAR2(80) NOT NULL,
+    Pays VARCHAR2(100) NOT NULL,
+    AGE NUMBER,
+    CONSTRAINT pk_jouer PRIMARY KEY (ID_Jouer)
+);
 -- Achat : achats (clé primaire composée)
 CREATE TABLE Achat (
     ID_Jouer NUMBER NOT NULL,
     ID_Jeu NUMBER NOT NULL,
-    DateAchat DATE ,
+    DateAchat DATE,
     CONSTRAINT pk_achat PRIMARY KEY (ID_Jouer, ID_Jeu)
 );
 
